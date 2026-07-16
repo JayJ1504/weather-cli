@@ -1,11 +1,11 @@
-# Weather Runner 🌦🤖
+# Weather Runner 🌦
 
 A compact desktop weather app built with **Python (Tkinter)** and the **OpenWeather API** that blends practical weather data with a retro‑futuristic animated runner, dynamic day/night cycles, and seasonal visual effects.
 
 ---
 
 ## Demo
-Add a short GIF or screenshot here showing the app running (place file `demo.gif` or `screenshot.png` in the repo and reference it).
+Will be posted shortly.
 
 ---
 
@@ -32,9 +32,12 @@ Add a short GIF or screenshot here showing the app running (place file `demo.gif
    ```bash
    git clone https://github.com/<your-username>/<repo-name>.git
    cd <repo-name>
+---
 
 Install dependencies: pip install requests
+---
 Ensure runner.gif is in the project root (or assets/runner.gif if you moved it).
+---
 Run the app---> python app.py
 
 Files and Structure:
@@ -45,9 +48,10 @@ weather-runner/
 ├── README.md
 └── .gitignore
 
-Configuration
+**Configuration**:
 OpenWeather API Key  
 The weather.py file currently contains an API key variable. Replace it with your own key if needed: api_key = "YOUR_API_KEY"
-Asset Path  
+
+**Asset Path**:  
 If you move runner.gif into an assets/ folder, update the path in app.py: tk.PhotoImage(file="assets/runner.gif", format=f"gif -index {i}").
 
