@@ -13,11 +13,25 @@ def get_weather(city):
             humidity = data['main']['humidity']
             wind = data['wind']['speed']
             condition = data['weather'][0]['description']
-            return (f"City: {city_name}\n"
-                    f"Temperature: {temp}°C\n"
-                    f"Humidity: {humidity}%\n"
-                    f"Wind Speed: {wind} m/s\n"
-                    f"Condition: {condition}")
+
+            emoji_map = {
+                "clear sky": "☀️",
+                "few clouds": "🌤",
+                "scattered clouds": "☁️",
+                "broken clouds": "☁️",
+                "shower rain": "🌧",
+                "rain": "🌧",
+                "thunderstorm": "⛈",
+                "snow": "❄️",
+                "mist": "🌫"
+            }
+            emoji = emoji_map.get(condition.lower(), "🌍")
+
+            return (f"{emoji} {city_name}\n"
+                    f"🌡 Temperature: {temp}°C\n"
+                    f"💧 Humidity: {humidity}%\n"
+                    f"💨 Wind Speed: {wind} m/s\n"
+                    f"☁ Condition: {condition}")
         else:
             return "⚠️ City not found. Try again."
     except requests.exceptions.RequestException:
